@@ -3,12 +3,18 @@ REST API - JSON
 GET /users - List all users    : it will render HTML document for browsers
 GET /api/users - List all users   : it will render json for mobile devices
 
-GET /users/1 - get the user with id 1
-GET /users/2 - get the user with id 2
+Dynamic Path parameters
 
-POST /users - create new user
+GET /api/users/:id
+:id -> dynamic/variable
+id -> static
 
-PATCH /users/1 - Edit the user with id 1
+GET /api/users/1 - get the user with id 1
+GET /api/users/2 - get the user with id 2
 
-DELETE /users/1 - Delete the user with id 1
+POST /api/users - create new user
+
+PATCH /api/users/1 - Edit the user with id 1
+
+DELETE /api/users/1 - Delete the user with id 1
 
