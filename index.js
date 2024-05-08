@@ -1,5 +1,10 @@
 const express = require("express");
 const app = express();
+const fs = require("fs");
+
+// Middleware
+
+app.use(express.urlencoded({extended:false}));
 
 const users = require("./MOCK_DATA.json");
 
@@ -52,8 +57,16 @@ app
 
 app.post("/api/users",(req,res) => {
 
-    //TODO : Create new user
-    return res.json({status : "pending"});
+    const body = req.body;
+
+    console.log(body);
+
+    users.push({...body,id:users.length+1});
+
+    fs.writeFile("./MOCK_DATA.json",JSON.stringify(users),(err,data) => {
+
+        return res.json({status : "success",id:users.length});
+    });
 });
 
 app.listen(PORT,() => {
