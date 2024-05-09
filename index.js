@@ -8,6 +8,7 @@ const users = require("./MOCK_DATA.json");
 /*
 
 https://expressjs.com/en/guide/writing-middleware.html
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
 
 Middleware functions can perform the following tasks:
 
@@ -18,7 +19,16 @@ Middleware functions can perform the following tasks:
 
 */
 
-app.use(express.urlencoded({extended:false}));  // Middleware that is helping in parsing
+//this middleware check the Content-Type header which is a request header and do the parsing on the basis of that
+//For example whenever a post request comes it checks the Content-Type request header
+
+/**
+         * Returns middleware that only parses urlencoded bodies and only looks at requests
+         * where the Content-Type header matches the type option
+ */
+
+// this middleware parse the data and put it in req.body
+app.use(express.urlencoded({extended:false}));  // Middleware that is helping in parsing , 
 
 app.use((req,res,next) => {
 
@@ -71,7 +81,7 @@ app.get("/api/users",(req,res) => {
     console.log(req.headers);
 
     //adding our own header in response
-    res.setHeader("myName","Ram");   // Custom Header
+    res.setHeader("X-MyName","Ram");   // Custom Header
     //Good Practice : ALways add X to custom headers for example 'X-Powered-By'
 
     console.log("I am in get route ",req.myUsername);
