@@ -5,20 +5,39 @@ const users = require("./MOCK_DATA.json");
 
 // Middleware
 
+/*
+
+https://expressjs.com/en/guide/writing-middleware.html
+
+Middleware functions can perform the following tasks:
+
+    Execute any code.
+    Make changes to the request and the response objects.
+    End the request-response cycle.
+    Call the next middleware in the stack.
+
+*/
+
 app.use(express.urlencoded({extended:false}));  // Middleware that is helping in parsing
 
 app.use((req,res,next) => {
 
     console.log("Hello from Middleware 1");
 
-    //return res.json({msg : "Hello from Middleware 1"});
+    fs.appendFile("log.txt",`\n ${Date.now()} : ${req.ip} : ${req.method} : ${req.path} ` ,(err,data) => {
 
-    next();  
+        req.myUsername = "Ram Rajya";
+
+        //return res.json({msg : "Hello from Middleware 1"});
+
+        next();
+    });
+      
 });
 
 app.use((req,res,next) => {
 
-    console.log("Hello from Middleware 2");
+    console.log("Hello from Middleware 2 ",req.myUsername);
 
     //return res.end("Hello from Middleware 2");
 
@@ -49,6 +68,7 @@ app.get("/users",(req,res) => {
 // it will be used for client side rendering
 app.get("/api/users",(req,res) => {
 
+    console.log("I am in get route ",req.myUsername);
     return res.json(users);
 });
 
