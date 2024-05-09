@@ -68,6 +68,12 @@ app.get("/users",(req,res) => {
 // it will be used for client side rendering
 app.get("/api/users",(req,res) => {
 
+    console.log(req.headers);
+
+    //adding our own header in response
+    res.setHeader("myName","Ram");   // Custom Header
+    //Good Practice : ALways add X to custom headers for example 'X-Powered-By'
+
     console.log("I am in get route ",req.myUsername);
     return res.json(users);
 });
