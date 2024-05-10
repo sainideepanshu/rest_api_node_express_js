@@ -4,3 +4,7 @@
  1715276267847 : ::1 : GET : /api/users 
  1715276416461 : ::1 : GET : /api/users 
  1715276677191 : ::1 : GET : /api/users 
+ 1715358654496 : ::1 : POST : /api/users 
+ 1715358662028 : ::1 : POST : /api/users 
+ 1715358961531 : ::1 : GET : /api/users/10052 
+ 1715358971224 : ::1 : GET : /api/users/1001 
