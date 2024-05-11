@@ -8,3 +8,25 @@
  1715358662028 : ::1 : POST : /api/users 
  1715358961531 : ::1 : GET : /api/users/10052 
  1715358971224 : ::1 : GET : /api/users/1001 
+ 1715422259835 : ::1 : POST : /api/users 
+ 1715422690997 : ::1 : POST : /api/users 
+ 1715423388166 : ::1 : GET : /users 
+ 1715423434945 : ::1 : GET : /users 
+ 1715423435136 : ::1 : GET : /favicon.ico 
+ 1715423662595 : ::1 : GET : /api/users 
+ 1715423819007 : ::1 : GET : /api/users/1001 
+ 1715423942181 : ::1 : GET : /api/users/663f443346831a11c40dbb37 
+ 1715423948147 : ::1 : GET : /api/users/663f443346831a11c40dbb3 
+ 1715424006901 : ::1 : GET : /api/users/663f443346831a11c40dbb37 
+ 1715424013945 : ::1 : GET : /api/users/663f443346831a11c40dbb37 
+ 1715424024246 : ::1 : GET : /api/users/663f443346831a11c40dbb31 
+ 1715424031954 : ::1 : GET : /api/users/663f443346831a11c40dbb38 
+ 1715424037778 : ::1 : GET : /api/users/663f443346831a11c40dbb37 
+ 1715424272920 : ::1 : PATCH : /api/users/663f443346831a11c40dbb37 
+ 1715424280904 : ::1 : GET : /api/users 
+ 1715424297936 : ::1 : PATCH : /api/users/663f443346831a11c40dbb37 
+ 1715424326854 : ::1 : GET : /api/users 
+ 1715424461879 : ::1 : POST : /api/users 
+ 1715424467894 : ::1 : GET : /api/users 
+ 1715424572382 : ::1 : DELETE : /api/users/663f4ccd09d419dd4cca8a97 
+ 1715424579969 : ::1 : GET : /api/users 
