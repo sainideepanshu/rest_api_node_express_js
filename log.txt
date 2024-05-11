@@ -30,3 +30,10 @@
  1715424467894 : ::1 : GET : /api/users 
  1715424572382 : ::1 : DELETE : /api/users/663f4ccd09d419dd4cca8a97 
  1715424579969 : ::1 : GET : /api/users 
+ 1715452136820 : ::1 : GET : /api/users 
+ 1715452169849 : ::1 : POST : /api/users 
+ 1715452199830 : ::1 : GET : /api/users 
+ 1715452220810 : ::1 : GET : /api/users/663f443346831a11c40dbb37 
+ 1715452228586 : ::1 : GET : /api/users/663fb909c89fd928e9b08c97 
+ 1715452247149 : ::1 : DELETE : /api/users/663fb909c89fd928e9b08c97 
+ 1715452255915 : ::1 : GET : /api/users 
